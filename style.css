@@ -86,8 +86,31 @@ body {
   font-size: clamp(20px, 5.7vw, 56px);
   font-weight: 800;
   letter-spacing: .12em;
-  color: var(--gold-light);
   white-space: nowrap;
+
+  /* Animated metallic gold */
+  background: linear-gradient(
+    110deg,
+    #a96f17 0%,
+    #d6ab43 25%,
+    #fff2a6 45%,
+    #f7dc83 52%,
+    #d6ab43 65%,
+    #a96f17 100%
+  );
+
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  filter:
+    drop-shadow(0 0 4px rgba(214,171,67,.35))
+    drop-shadow(0 3px 5px rgba(0,0,0,.65));
+
+  animation:
+    brandShine 5s linear infinite,
+    brandFloat 4s ease-in-out infinite;
 }
 
 .brand-sub {
@@ -505,4 +528,35 @@ body {
 
 body.preview #overlay {
   background: linear-gradient(145deg, #515b66, #20272f);
+}
+@keyframes brandShine {
+  0% {
+    background-position: 200% center;
+    filter:
+      drop-shadow(0 0 3px rgba(214,171,67,.25))
+      drop-shadow(0 3px 5px rgba(0,0,0,.65));
+  }
+
+  50% {
+    filter:
+      drop-shadow(0 0 8px rgba(255,225,120,.65))
+      drop-shadow(0 3px 5px rgba(0,0,0,.65));
+  }
+
+  100% {
+    background-position: -200% center;
+    filter:
+      drop-shadow(0 0 3px rgba(214,171,67,.25))
+      drop-shadow(0 3px 5px rgba(0,0,0,.65));
+  }
+}
+
+@keyframes brandFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-2px);
+  }
 }
