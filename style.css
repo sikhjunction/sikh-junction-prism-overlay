@@ -76,10 +76,20 @@ body {
 }
 
 .brand-rule {
-  width: 42%;
+  width: 55%;
   height: 2px;
-  margin: 0 auto 1.1vh;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 0.8vh auto 0.8vh;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #d6ab43,
+    #fff2a6,
+    #d6ab43,
+    transparent
+  );
+
+  box-shadow: 0 0 6px rgba(214,171,67,.45);
 }
 
 .brand {
