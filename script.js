@@ -3,7 +3,8 @@
 const announcements = [
   { text: "LIKE",      icon: "♥" },
   { text: "SHARE",     icon: "↗" },
-  { text: "COMMENT", icon: "✦" }
+  { text: "COMMENT",   icon: "✦" },
+  { text: "SUBSCRIBE", icon: "✓" }
 ];
 
 const visibleFor = 2800;
